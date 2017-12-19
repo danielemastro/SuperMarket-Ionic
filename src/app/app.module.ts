@@ -11,8 +11,8 @@ import {InterceptorService} from "../providers/interceptor-service/interceptor-s
 import {SharedService} from "../providers/shared-service/shared-service";
 import {TransazioneService} from "../providers/transazione-service/transazione-service";
 import {LoginService} from "../providers/login-service/login-service";
-import {ProductServiceProvider} from "../providers/product-service/product-service";
-import {CreditCardServiceProvider} from "../providers/credit-card-service/credit-card-service";
+import {CreditCardService} from "../providers/credit-card-service/credit-card-service";
+import {ProductService} from "../providers/product-service/product-service";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 
 
@@ -40,13 +40,14 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
     TransazioneService,
     SharedService,
     InterceptorService,
-    ProductServiceProvider,
-    CreditCardServiceProvider,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
       multi: true,
     },
+    ProductService,
+    CreditCardService,
+
   ]
 })
 export class AppModule {}
