@@ -5,18 +5,11 @@ import {Product} from "../../models/product";
 import {Observable} from "rxjs/Observable";
 import {BACKEND_URL} from "../../utils";
 
-/*
-  Generated class for the ProductServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-
 @Injectable()
-export class ProductServiceProvider {
+export class ProductService {
 
   constructor(public http: HttpClient) {
-    console.log('Hello ProductServiceProvider Provider');
+    console.log('Hello ProductService Provider');
   }
 
   listProdotti: Array<Product>;

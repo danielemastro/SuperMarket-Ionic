@@ -15,10 +15,10 @@ const httpOptions = {
   and Angular DI.
 */
 @Injectable()
-export class CreditCardServiceProvider {
+export class CreditCardService {
 
   constructor(public http: HttpClient) {
-    console.log('Hello CreditCardServiceProvider Provider');
+    console.log('Hello CreditCardService Provider');
   }
 
 
