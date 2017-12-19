@@ -7,6 +7,12 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {InterceptorService} from "../providers/interceptor-service/interceptor-service";
+import {SharedService} from "../providers/shared-service/shared-service";
+import {TransazioneService} from "../providers/transazione-service/transazione-service";
+import {LoginService} from "../providers/login-service/login-service";
+import {ProductServiceProvider} from "../providers/product-service/product-service";
+import {CreditCardServiceProvider} from "../providers/credit-card-service/credit-card-service";
 
 
 @NgModule({
@@ -29,10 +35,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginServiceProvider,
-    TransazioneServiceProvider,
-    SharedServiceProvider,
-    InterceptorServiceProvider
+    LoginService,
+    TransazioneService,
+    SharedService,
+    InterceptorService,
+    ProductServiceProvider,
+    CreditCardServiceProvider,
+
   ]
 })
 export class AppModule {}
