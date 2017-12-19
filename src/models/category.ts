@@ -1,0 +1,3 @@
+export enum Category{
+  ALIMENTI, PRODOTTI_CASA, PRODOTTI_PERSONA, ANIMALI
+}
