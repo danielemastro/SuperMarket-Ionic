@@ -13,6 +13,7 @@ import {TransazioneService} from "../providers/transazione-service/transazione-s
 import {LoginService} from "../providers/login-service/login-service";
 import {ProductServiceProvider} from "../providers/product-service/product-service";
 import {CreditCardServiceProvider} from "../providers/credit-card-service/credit-card-service";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
 
 
 @NgModule({
@@ -41,7 +42,11 @@ import {CreditCardServiceProvider} from "../providers/credit-card-service/credit
     InterceptorService,
     ProductServiceProvider,
     CreditCardServiceProvider,
-
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
   ]
 })
 export class AppModule {}
