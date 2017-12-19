@@ -1,6 +1,7 @@
 
 import {Category} from "./category";
 import {Unita} from "./unita";
+import {Transazione} from "./transazione";
 
 export class ProdottoAcquistato {
   id: number;
