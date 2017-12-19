@@ -1,3 +1,5 @@
+import {ProdottoAcquistato} from "./prodottoAcquistato";
+
 export class Transazione {
 
   private  idTransazione:number;
