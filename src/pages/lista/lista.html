@@ -16,12 +16,12 @@
 </ion-header>
 
 
-<ion-content padding lazy-scroll>
-  <ion-list>
+<ion-content padding lazy-scroll class="noPadding">
+  <ion-list >
     <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
 
       <ion-thumbnail  item-start>
-        <img src={{prod.img}}>
+        <img src={{prod.img}} class="thumbnailContainer">
         <!--[lazyLoad]="prod.img"-->
       </ion-thumbnail>
 

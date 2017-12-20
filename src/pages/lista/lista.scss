@@ -1,17 +1,23 @@
 page-lista {
+  .truncate{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;     /** IE6+, Firefox 7+, Opera 11+, Chrome, Safari **/
+    -o-text-overflow: ellipsis;  /** Opera 9 & 10 **/
+    width: 90%; /* note that this width will have to be smaller to see the effect */
+  }
 
-}
+  ion-label {
+    height: 100%;
+  }
 
-.truncate{
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;     /** IE6+, Firefox 7+, Opera 11+, Chrome, Safari **/
-  -o-text-overflow: ellipsis;  /** Opera 9 & 10 **/
-  width: 90%; /* note that this width will have to be smaller to see the effect */
-}
+  .thumbnailContainer{
+    object-fit: scale-down;
+  }
 
-ion-label {
-  height: 100%;
+  .noPadding {
+    padding: 0px !important;
+  }
 }
 
