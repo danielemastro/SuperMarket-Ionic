@@ -15,7 +15,7 @@
 
 <ion-content padding lazy-scroll class="noPadding">
   <ion-list >
-    <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
+    <ion-item *ngFor="let prod of listProduct" >
 
       <ion-thumbnail  item-start>
         <img src={{prod.img}} class="thumbnailContainer">
