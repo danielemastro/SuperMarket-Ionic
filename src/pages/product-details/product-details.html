@@ -37,7 +37,8 @@
 
 <br><br>
 
-  <button ion-button block icon-start (tap)="aggiungiProdotto(prodotto)">
+  <button ion-button block icon-start (tap)="aggiungiProdotto(prodotto)"
+          [disabled]="prodottoDaCarrello.quantitaDaAcquistare == prodotto.quantitaDisponibile">
     <ion-icon name="cart"></ion-icon>
     Aggiungi al Carrello
   </button>
