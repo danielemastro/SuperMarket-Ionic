@@ -16,6 +16,7 @@ export class ProductService {
   eliminato: boolean = false;
 
   findAll(): Observable<Product[]> {
+    console.log("Chiamata service al Server - FINDALL()")
     return this.http.get<Product[]>(BACKEND_URL + "/product/getListProduct");
   }
 

@@ -13,26 +13,28 @@ import {TransazioneService} from "../providers/transazione-service/transazione-s
 import {LoginService} from "../providers/login-service/login-service";
 import {CreditCardService} from "../providers/credit-card-service/credit-card-service";
 import {ProductService} from "../providers/product-service/product-service";
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {ListaPage} from "../pages/lista/lista";
+import {LazyLoadImageModule} from "ng-lazyload-image";
+import {ProductDetailsPage} from "../pages/product-details/product-details";
 
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    LazyLoadImageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage
+    MyApp
   ],
   providers: [
+    BrowserModule,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -47,7 +49,6 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
     },
     ProductService,
     CreditCardService,
-
   ]
 })
 export class AppModule {}
