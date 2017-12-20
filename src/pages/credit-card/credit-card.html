@@ -1,15 +1,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>REGISTRAZIONE CARTA DI CREDITO</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Aggiungi carta</ion-title>
   </ion-navbar>
-
 </ion-header>
 <ion-content padding>
-  numero: string;
-  scadenza: string;
-  ccv: string;
-  credito: number;
+
   <ion-item>
     <ion-label stacked></ion-label>
     <ion-input type="text" placeholder="Inserisci Numero carta" name="numero" [(ngModel)]="creditCard.numero" pattern="[0-9]*" required></ion-input>
