@@ -3,7 +3,12 @@ page-product-details {
 }
 
 .image{
-  width: 100%;
-  height: 50%;
-  viewport-fit: cover;
+  width: auto;
+  height: 300px;
+  display: inline-block;
+}
+
+.imageContainer{
+  overflow: visible;
+  text-align: center;
 }
