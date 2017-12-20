@@ -11,7 +11,7 @@ import {ListaPage} from "../pages/lista/lista";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'LoginPage';  //indica la 1°pagina che si vede
+  rootPage: any = 'ListaPage';  //indica la 1°pagina che si vede
 
   pages: Array<{title: string, component: any}>;
 

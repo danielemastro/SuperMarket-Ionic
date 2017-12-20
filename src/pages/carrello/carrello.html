@@ -10,7 +10,6 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
     <ion-title>Carrello</ion-title>
   </ion-navbar>
 
@@ -20,7 +19,7 @@
 
 <ion-content padding lazy-scroll class="noPadding">
   <ion-list >
-    <ion-item *ngFor="let prod of listProduct" >
+    <ion-item-sliding #item *ngFor="let prod of listProduct">
 
       <ion-thumbnail  item-start>
         <img src={{prod.img}} class="thumbnailContainer">
@@ -30,10 +29,20 @@
       <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>
       <p>
         Prezzo: {{prod.prezzoScontato | currency:'EUR'}} <br>
-        Marca: {{prod.marca}}
+        Marca: {{prod.marca}}<br>
         Quantità: {{prod.quantitaDaAcquistare}}
       </p>
-    </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="reduce(prod)">
+          <ion-icon name="remove"></ion-icon>
+          Elimina uno
+        </button>
+        <button ion-button (click)="delete(prod)">
+          <ion-icon name="trash"></ion-icon>
+          Elimina tutti
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
   <div *ngIf="listProduct.length != 0">
     <hr>
