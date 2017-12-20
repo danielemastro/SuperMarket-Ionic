@@ -17,5 +17,41 @@
   <div class="imageContainer">
     <img src={{prodotto.img}} class="image">
   </div>
-<h3>{{prodotto.nome}}</h3>
+  <h2>{{prodotto.nome}}</h2>
+
+  <div><strong>Disponibili: </strong>{{prodotto.quantitaDisponibile}}</div>
+  <br>
+
+  <div *ngIf="prodotto.offerta == 0">
+    <span style="font-size: medium"><strong> Prezzo:</strong></span>
+    <span style="color: red; font-size: x-large">{{prodotto.prezzoIvato | currency:'EUR'}}</span>
+  </div>
+
+  <div *ngIf="prodotto.offerta != 0">
+    <del>Prezzo consigliato: {{prodotto.prezzoIvato | currency:'EUR'}}</del>
+    <span class="sconto"> SCONTO: -{{prodotto.offerta}} %</span>
+    <br><br>
+    <span style="font-size: medium"><strong>Prezzo: </strong></span>
+    <span style="color: red; font-size: x-large">{{prodotto.prezzoScontato | currency:'EUR'}}</span>
+  </div>
+
+  <button ion-button icon-start (tap)="aggiungiProdotto(prodotto)">
+    <ion-icon name="cart"></ion-icon>
+    Aggiungi al Carrello
+  </button>
+
+  <br><br>
+  <hr>
+  <br><br>
+
+  <div>
+    <h3>Dettagli prodotto: </h3>
+    <strong>Marca: </strong> {{prodotto.marca}}
+    <br><br>
+    <strong>Data di Scadenza: </strong> {{prodotto.dataScadenza}}
+    <br><br>
+    <strong>Categoria: </strong> {{prodotto.categoria}}
+    <br><br>
+    <strong>Prezzo senza IVA: </strong> {{prodotto.prezzoSenzaIva | currency:'EUR'}}
+  </div>
 </ion-content>
