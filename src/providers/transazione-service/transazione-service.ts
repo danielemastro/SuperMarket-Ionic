@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Observable";
 
 import {HttpClient} from "@angular/common/http";
 import {BACKEND_URL} from "../../../utils";
-import {Transazione} from "../../models/transazione";
+import {Transazione} from "../../models/Transazione";
 
 @Injectable()
 export class TransazioneService {

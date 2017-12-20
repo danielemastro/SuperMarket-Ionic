@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {InterceptorService} from "../providers/interceptor-service/interceptor-service";
@@ -13,24 +10,21 @@ import {TransazioneService} from "../providers/transazione-service/transazione-s
 import {LoginService} from "../providers/login-service/login-service";
 import {CreditCardService} from "../providers/credit-card-service/credit-card-service";
 import {ProductService} from "../providers/product-service/product-service";
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    ListPage
+    MyApp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   providers: [
     StatusBar,
@@ -47,7 +41,6 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
     },
     ProductService,
     CreditCardService,
-
   ]
 })
 export class AppModule {}

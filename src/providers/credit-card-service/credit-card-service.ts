@@ -1,7 +1,7 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {CreditCard} from "../../models/creditCard";
+import {CreditCard} from "../../models/CreditCard";
 import {BACKEND_URL} from "../../utils";
 
 const httpOptions = {
