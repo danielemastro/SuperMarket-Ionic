@@ -31,11 +31,27 @@ export class CreditCardPage {
   }
   getListCardUser(){
     this.creditCardService.getListCardUser().subscribe(data => {
-      console.log(data);
-      this.navCtrl.setRoot("")
       console.log("Carte: ", data);
     }, err =>{
       console.log(err);
     })
   }
+  addCard() {
+    console.log(this.creditCard)
+    this.creditCardService.addCard(this.creditCard).subscribe(data => {
+      console.log(data);
+    }, err => {
+      console.log(err);
+    })
+  }
+  deleteCard(creditCard){
+    console.log(creditCard)
+    this.creditCardService.deleteCreditCard(creditCard).subscribe(data => {
+      this.getListCardUser()
+      console.log(data);
+    }, err => {
+      console.log(err);
+    })
+  }
+
 }

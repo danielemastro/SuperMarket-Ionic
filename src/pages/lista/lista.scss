@@ -16,8 +16,12 @@ page-lista {
     object-fit: scale-down;
   }
 
-  .noPadding {
-    padding: 0px !important;
+  .title{
+    display: inline-block;
+  }
+
+  .titleContainer{
+    text-align: center;
   }
 }
 

@@ -1,14 +1,19 @@
 page-product-details {
+  .image{
+    width: auto;
+    height: 300px;
+    display: inline-block;
+  }
+
+  .imageContainer{
+    overflow: visible;
+    text-align: center;
+  }
+
+  .sconto {
+    color: red;
+    font-style: italic;
+  }
 
 }
 
-.image{
-  width: auto;
-  height: 300px;
-  display: inline-block;
-}
-
-.imageContainer{
-  overflow: visible;
-  text-align: center;
-}
