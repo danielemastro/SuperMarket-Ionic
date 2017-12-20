@@ -1,0 +1,45 @@
+<!--
+  Generated template for the CarrelloPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>carrello</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding lazy-scroll class="noPadding">
+  <ion-list >
+    <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
+
+      <ion-thumbnail  item-start>
+        <img src={{prod.img}} class="thumbnailContainer">
+        <!--[lazyLoad]="prod.img"-->
+      </ion-thumbnail>
+
+      <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>
+      <p>
+        Prezzo: {{prod.prezzoScontato | currency:'EUR'}} <br>
+        Marca: {{prod.marca}}
+        Quantità: {{prod.quantitaDaAcquistare}}
+      </p>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="listProduct.length != 0">
+    <hr>
+
+    <h3>
+      <strong>Totale: {{totale | currency: 'EUR'}}</strong>
+    </h3>
+
+    <button ion-button (tap)="checkOut()">
+      Vai al Check-Out
+    </button>
+
+  </div>
+</ion-content>
