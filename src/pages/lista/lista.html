@@ -10,17 +10,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-title>Lista Prodotti</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding lazy-scroll class="noPadding">
-  <ion-list >
+<ion-content padding lazy-scroll>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingText="Rilascia per aggiornare la lista"
+      refreshingText="Aggiornando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
     <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
 
-      <ion-thumbnail  item-start>
+      <ion-thumbnail item-start>
         <img src={{prod.img}} class="thumbnailContainer">
         <!--[lazyLoad]="prod.img"-->
       </ion-thumbnail>
