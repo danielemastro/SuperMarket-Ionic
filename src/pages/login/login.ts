@@ -25,6 +25,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   login() {
+    console.log("ho iniziato register: "+this.user);
     this.loginService.login(this.user).subscribe(data => {
 
       console.log(data);
