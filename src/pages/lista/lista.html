@@ -7,12 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lista</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista Prodotti</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding lazy-scroll>
+  <ion-list>
+    <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
 
+      <ion-thumbnail  item-start>
+        <img src={{prod.img}}>
+        <!--[lazyLoad]="prod.img"-->
+      </ion-thumbnail>
+
+      <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>
+      <p>
+        Prezzo: {{prod.prezzoScontato | currency:'EUR'}} <br>
+        Marca: {{prod.marca}}
+      </p>
+    </ion-item>
+  </ion-list>
 </ion-content>

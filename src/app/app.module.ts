@@ -11,6 +11,9 @@ import {LoginService} from "../providers/login-service/login-service";
 import {CreditCardService} from "../providers/credit-card-service/credit-card-service";
 import {ProductService} from "../providers/product-service/product-service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {ListaPage} from "../pages/lista/lista";
+import {LazyLoadImageModule} from "ng-lazyload-image";
+import {ProductDetailsPage} from "../pages/product-details/product-details";
 
 
 @NgModule({
@@ -19,8 +22,9 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    LazyLoadImageModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

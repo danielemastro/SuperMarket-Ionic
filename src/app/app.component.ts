@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform} from 'ionic-angular';
+import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {LoginPage} from "../pages/login/login";
+import {ListaPage} from "../pages/lista/lista";
 
 @Component({
   templateUrl: 'app.html'
@@ -10,7 +11,7 @@ import {LoginPage} from "../pages/login/login";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'LoginPage';  //carica questa pag se non ce n'è nessun'altra caricata
+  rootPage: any = 'ListaPage';  //carica questa pag se non ce n'è nessun'altra caricata
 
   pages: Array<{title: string, component: any}>;
 
@@ -19,10 +20,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Login', component: 'LoginPage' },
+      { title: 'Login', component: 'LoginPage'},
       { title: 'Lista Prodotti', component: 'ListaPage' },
-      { title: 'Registrazione', component: 'RegistrationPage' }
-
+      { title: 'Registrazione', component: 'RegistrationPage' },
     ];
 
   }
