@@ -14,6 +14,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(user) {
+    console.log("user: "+user)
     return this.http.post(BACKEND_URL + '/login', user, httpOptions);
   }
 
