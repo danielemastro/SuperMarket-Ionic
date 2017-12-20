@@ -27,22 +27,9 @@
     <ion-input type="text" placeholder="Inserisci CAP" name="cap" [(ngModel)]="user.cap" pattern="[0-9]*" required></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label stacked></ion-label>
-    <ion-input type="text" placeholder="Inserisci Indirizzo" name="via" [(ngModel)]="user.via" required></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label stacked></ion-label>
-    <ion-input type="text" placeholder="Inserisci Città" name="city" [(ngModel)]="user.citta" required></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label stacked></ion-label>
-    <ion-input type="text" placeholder="Inserisci Provincia" name="provincia" [(ngModel)]="user.provincia" pattern="[a-z A-Z]*" required></ion-input>
-  </ion-item>
 
   <br> <br>
 
   <button ion-button block color="primary" (tap)="registration()">SALVA</button>
-  <!--tap corrisponde al touch e riportare cosa deve fare tra ""-->
-
+  <!--dopo tap inserito il metodo del ts corrispondente x la destinazione-->
 </ion-content>

@@ -11,7 +11,7 @@ import {ListaPage} from "../pages/lista/lista";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'ListaPage';  //carica questa pag se non ce n'è nessun'altra caricata
+  rootPage: any = 'LoginPage';  //indica la 1°pagina che si vede
 
   pages: Array<{title: string, component: any}>;
 
@@ -23,7 +23,8 @@ export class MyApp {
       { title: 'Login', component: 'LoginPage'},
       { title: 'Lista Prodotti', component: 'ListaPage' },
       { title: 'Registrazione', component: 'RegistrationPage' },
-      { title: 'Carrello', component: 'CarrelloPage' }
+      { title: 'Carrello', component: 'CarrelloPage' },
+      { title: 'Carta', component: 'CreditCardPage' }
     ];
 
   }

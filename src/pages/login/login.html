@@ -13,11 +13,13 @@
   </ion-item>
   <ion-item>
     <ion-label stacked></ion-label>
-    <ion-input type="password" placeholder="Inserisci Password" name="psw" [(ngModel)]="user.password" required></ion-input>
+    <ion-input type="password" placeholder="Inserisci Password" name="psw" [(ngModel)]="user.password"></ion-input>
   </ion-item>
 <br> <br>
 
 <button ion-button block color="primary" (tap)="login()">LOGIN</button>
+  <!--tap corrisponde al touch e riportare cosa deve fare ""
+  dopo inserito il metodo del ts corrispondente x la destinazione-->
   <br> <br>
   <button ion-button round color="danger" class="button" (tap)="registration()">Registrati</button>
 
