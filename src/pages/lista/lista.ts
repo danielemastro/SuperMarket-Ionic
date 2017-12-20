@@ -50,10 +50,10 @@ export class ListaPage {
     }, e => console.log(e))
   }
 
-  itemTapped(event, item) {
+  itemTapped(event, prod) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ProductDetailsPage, {
-      item: item
+    this.navCtrl.push('ProductDetailsPage', {
+      item: prod
     });
   }
 }

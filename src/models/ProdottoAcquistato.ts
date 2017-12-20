@@ -1,7 +1,7 @@
 
-import {Category} from "./category";
-import {Unita} from "./unita";
-import {Transazione} from "./transazione";
+import {Category} from "./Category";
+import {Unita} from "./Unita";
+import {Transazione} from "./Transazione";
 
 export class ProdottoAcquistato {
   id: number;

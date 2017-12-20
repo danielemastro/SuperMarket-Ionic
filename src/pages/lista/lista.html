@@ -21,7 +21,8 @@
     <ion-item *ngFor="let prod of listaProdotti" (tap)="itemTapped($event, prod)">
 
       <ion-thumbnail  item-start>
-        <img [lazyLoad]="prod.img">
+        <img src={{prod.img}}>
+        <!--[lazyLoad]="prod.img"-->
       </ion-thumbnail>
 
       <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>

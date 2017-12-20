@@ -1,4 +1,4 @@
-import {ProdottoAcquistato} from "./prodottoAcquistato";
+import {ProdottoAcquistato} from "./ProdottoAcquistato";
 
 export class Transazione {
 

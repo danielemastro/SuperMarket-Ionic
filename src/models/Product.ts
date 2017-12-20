@@ -1,5 +1,5 @@
-import {Category} from "./category";
-import {Unita} from "./unita";
+import {Category} from "./Category";
+import {Unita} from "./Unita";
 
 export class Product {
   id: number;
