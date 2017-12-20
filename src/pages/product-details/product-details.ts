@@ -18,9 +18,11 @@ import {ProductService} from "../../providers/product-service/product-service";
 export class ProductDetailsPage {
 
   prodotto: Product;
+  private prodottoDaCarrello: Product
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private service: ProductService) {
     this.prodotto = navParams.get('item');
+    this.getProdCarrello(this.prodotto)
     console.log(this.prodotto)
   }
 
@@ -31,4 +33,12 @@ export class ProductDetailsPage {
   aggiungiProdotto(prod){
     this.service.addProdotto(prod);
   }
+
+  getProdCarrello(prod) {
+    this.service.getOnefromCarrello(prod).subscribe(data => {
+      console.log(data)
+      this.prodottoDaCarrello = data;
+    })
+  }
+
 }
