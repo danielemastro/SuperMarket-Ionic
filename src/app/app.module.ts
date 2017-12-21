@@ -11,7 +11,7 @@ import {LoginService} from "../providers/login-service/login-service";
 import {CreditCardService} from "../providers/credit-card-service/credit-card-service";
 import {ProductService} from "../providers/product-service/product-service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import { TransazioneProvider } from '../providers/transazione/transazione';
+
 
 
 
@@ -43,7 +43,6 @@ import { TransazioneProvider } from '../providers/transazione/transazione';
     },
     ProductService,
     CreditCardService,
-    TransazioneProvider,
   ]
 })
 export class AppModule {}
