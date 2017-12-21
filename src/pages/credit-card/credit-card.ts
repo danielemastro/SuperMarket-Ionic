@@ -4,13 +4,6 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {CreditCardService} from "../../providers/credit-card-service/credit-card-service";
 import {CreditCard} from "../../models/CreditCard";
 
-/**
- * Generated class for the CreditCardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-credit-card',
