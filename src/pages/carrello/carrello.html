@@ -16,22 +16,22 @@
 </ion-header>
 
 
-
 <ion-content padding lazy-scroll class="noPadding">
-  <ion-list >
+  <ion-list>
     <ion-item-sliding #item *ngFor="let prod of listProduct">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src={{prod.img}} class="thumbnailContainer">
+        </ion-thumbnail>
 
-      <ion-thumbnail  item-start>
-        <img src={{prod.img}} class="thumbnailContainer">
-        <!--[lazyLoad]="prod.img"-->
-      </ion-thumbnail>
+        <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>
+        <p>
+          Prezzo: {{prod.prezzoScontato | currency:'EUR'}} <br>
+          Marca: {{prod.marca}}<br>
+          Quantità: {{prod.quantitaDaAcquistare}}
+        </p>
+      </ion-item>
 
-      <h2 class="truncate"><strong>{{prod.nome }}</strong></h2>
-      <p>
-        Prezzo: {{prod.prezzoScontato | currency:'EUR'}} <br>
-        Marca: {{prod.marca}}<br>
-        Quantità: {{prod.quantitaDaAcquistare}}
-      </p>
       <ion-item-options side="left">
         <button ion-button (click)="reduce(prod)">
           <ion-icon name="remove"></ion-icon>
