@@ -13,7 +13,6 @@ import {ProductService} from "../providers/product-service/product-service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 
-
 @NgModule({
   declarations: [
     MyApp
@@ -41,7 +40,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
       multi: true,
     },
     ProductService,
-    CreditCardService
+    CreditCardService,
   ]
 })
 export class AppModule {}

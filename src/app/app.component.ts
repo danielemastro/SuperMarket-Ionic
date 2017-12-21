@@ -25,8 +25,9 @@ export class MyApp {
       { title: 'Registrazione', component: 'RegistrationPage' },
       { title: 'Carrello', component: 'CarrelloPage' },
       { title: 'Carta', component: 'CreditCardPage' },
-      { title: 'Scelta', component: 'SceltaCartaPage' }
-    ];
+      { title: 'Scelta', component: 'SceltaCartaPage' },
+      { title: 'Transazioni', component: 'TransazionePage'}
+      ];
 
   }
 
