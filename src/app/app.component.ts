@@ -24,7 +24,8 @@ export class MyApp {
       { title: 'Lista Prodotti', component: 'ListaPage' },
       { title: 'Registrazione', component: 'RegistrationPage' },
       { title: 'Carrello', component: 'CarrelloPage' },
-      { title: 'Carta', component: 'CreditCardPage' }
+      { title: 'Carta', component: 'CreditCardPage' },
+      { title: 'Scelta', component: 'SceltaCartaPage' }
     ];
 
   }

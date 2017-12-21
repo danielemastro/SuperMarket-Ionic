@@ -1,10 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {of} from "rxjs/observable/of";
 import {Product} from "../../models/Product";
 import {Observable} from "rxjs/Observable";
 import {BACKEND_URL} from "../../utils";
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'})
+};
 @Injectable()
 export class ProductService {
 
@@ -19,7 +23,9 @@ export class ProductService {
     console.log("Chiamata service al Server - FINDALL()")
     return this.http.get<Product[]>(BACKEND_URL + "/product/getListProduct");
   }
-
+  compraProdotti(listaProdotti,idCarta): Observable<Product>{
+    return this.http.post<Product>(BACKEND_URL+"/product/addProductById/"+idCarta,listaProdotti,httpOptions)
+  }
   findDisponibili(): Observable<Product[]> {
     return this.http.get<Product[]>(BACKEND_URL + "/product/getListProductDisponibile");
   }
@@ -137,5 +143,8 @@ export class ProductService {
   roundNumber(num){
     return parseFloat(num).toFixed(2);
   }
-
+  cleanCarrello(){  //cancello tutto il carrello
+    this.listProdotti = new Array;
+    localStorage.setItem("carrello", JSON.stringify(this.listProdotti))
+  }
 }

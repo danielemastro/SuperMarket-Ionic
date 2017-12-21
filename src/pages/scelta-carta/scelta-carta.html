@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scelta carta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+  <ion-list>
+    <ion-item  *ngFor="let carta of listaCard" (tap)="showConfirm(carta)">
+      <h2 class="truncate"><strong>{{carta.numero }}</strong></h2>
+      <p>
+        Numero Carta: {{carta.numero}} <br>
+        CCV: {{carta.ccv}}<br>
+        Data di scadenza: {{carta.scadenza}}<br>
+        Credito disponibile: {{carta.credito | currency:'EUR'}}
+      </p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

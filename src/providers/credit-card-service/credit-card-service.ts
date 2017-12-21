@@ -26,7 +26,7 @@ export class CreditCardService {
     return this.http.get<Array<CreditCard>>(BACKEND_URL + "/creditCard/getCardUser");
   }
   addCard(creditCard): Observable<CreditCard>  {
-    return this.http.post<CreditCard>(BACKEND_URL + "/creditCard/addCartaCredito", httpOptions);
+    return this.http.post<CreditCard>(BACKEND_URL + "/creditCard/addCartaCredito",creditCard, httpOptions);
   }
   deleteCreditCard(creditCard): Observable<CreditCard> {
     return this.http.delete<CreditCard>(BACKEND_URL + "/creditcard/deletecard/" + creditCard.id);

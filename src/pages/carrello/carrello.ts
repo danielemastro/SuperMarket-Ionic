@@ -30,7 +30,7 @@ export class CarrelloPage {
   }
 
   checkOut(){
-    this.navCtrl.setRoot("SceltaCartePage")
+    this.navCtrl.setRoot("SceltaCartaPage")
   }
   getCarrello() {
     this.listProduct = JSON.parse(localStorage.getItem("carrello"))
