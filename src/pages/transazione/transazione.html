@@ -7,12 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>transazione</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Transazione</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      ListaTransazioni
+    </ion-list-header>
+    <ion-item *ngFor="let transazione of listaTransazioni" (tap)="openModal(transazione)">
+      <h2 class="truncate"><strong>{{transazione.codOrdine}}</strong></h2>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
